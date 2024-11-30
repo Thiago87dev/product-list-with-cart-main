@@ -4,7 +4,6 @@ import {
   addSobremesa,
   increaseQuantity,
   decreaseQuantity,
-  removeSobremesa,
 } from "@/redux/cart/slice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectProductCount } from "@/redux/cart/cart.selectors";
@@ -47,6 +46,7 @@ const Button = ({ sobremesa }: ButtonProps) => {
   const handleDecreaseQuantity = () => {
     dispatch(decreaseQuantity(sobremesa.name));
   };
+
 
   return (
     <div>
