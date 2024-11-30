@@ -61,7 +61,7 @@ const Cart = () => {
                     </div>
                   </div>
                   <div onClick={() => handleRemoveSobremesa(i.name)} className="flex cursor-pointer items-center justify-center font-bold border-solid w-5 h-5 border-2 rounded-full border-black">
-                    x
+                    X
                   </div>
                 </div>
               ))}
