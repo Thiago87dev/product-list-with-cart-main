@@ -16,7 +16,7 @@ const Cart = () => {
   return (
     <div>
       {sobremesas.length === 0 ? (
-        <div className="flex items-center justify-center w-[320px] min-h-[250px] bg-white m-5 rounded-lg lg:w-[400px] lg:min-h-[400px] md:mt-20">
+        <div className="flex items-center justify-center w-[320px] min-h-[250px] bg-white m-5 rounded-lg lg:w-[400px] lg:min-h-[400px] md:mt-20 mb-20">
           <div className="flex flex-col gap-2 md:gap-8 p-4 ">
             <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
               Your Cart (0)
@@ -34,7 +34,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="flex  text-black  bg-white m-5 rounded-lg w-[320px] min-h-[250px] lg:w-[400px] lg:min-h-[400px] md:mt-20">
+        <div className="flex  text-black  bg-white m-5 rounded-lg w-[320px] min-h-[250px] lg:w-[400px] lg:min-h-[400px] md:mt-20 mb-20">
           <div className="flex flex-col gap-2 md:gap-8 w-full px-5 pt-14">
             <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
               Your Cart ({sobremesas.reduce((acc, item) => acc + item.quantity!,0)})
