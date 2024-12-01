@@ -16,7 +16,7 @@ const Cart = () => {
   return (
     <div>
       {sobremesas.length === 0 ? (
-        <div className="flex items-center justify-center w-[320px] h-[250px] bg-gray-500 m-5 rounded-lg lg:w-[400px] lg:h-[400px] md:mt-20">
+        <div className="flex items-center justify-center w-[320px] min-h-[250px] bg-white m-5 rounded-lg lg:w-[400px] lg:min-h-[400px] md:mt-20">
           <div className="flex flex-col gap-2 md:gap-8 p-4 ">
             <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
               Your Cart (0)
@@ -34,7 +34,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="flex overflow-auto text-black  bg-white m-5 rounded-lg w-[320px] h-[250px] lg:w-[400px] lg:h-[400px] md:mt-20">
+        <div className="flex  text-black  bg-white m-5 rounded-lg w-[320px] min-h-[250px] lg:w-[400px] lg:min-h-[400px] md:mt-20">
           <div className="flex flex-col gap-2 md:gap-8 w-full px-5 pt-14">
             <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
               Your Cart ({sobremesas.reduce((acc, item) => acc + item.quantity!,0)})
@@ -71,6 +71,19 @@ const Cart = () => {
               <div className="text-3xl font-bold">
                 ${sobremesas.reduce((acc, item) => acc + item.price * item.quantity!, 0).toFixed(2)}
               </div>
+            </div>
+            <div className="flex gap-2 justify-center">
+            <Image
+              src="/images/icon-carbon-neutral.svg"
+              alt="empty cart"
+              width={25}
+              height={25}
+              
+            />
+              <h2>This is a <span className="font-semibold">carbon-neutral</span> delivery</h2>
+            </div>
+            <div className="flex justify-center">
+              <button className="text-white bg-red-500 px-20 lg:px-24 py-2 rounded-full hover:bg-red-900">Comfirm Order</button>
             </div>
           </div>
         </div>
