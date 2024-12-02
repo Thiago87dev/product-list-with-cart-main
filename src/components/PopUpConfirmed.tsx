@@ -19,9 +19,9 @@ const PopUpConfirmed = ({ onClose, onCloseClickingOut }: { onClose: () => void, 
         </div>
         <div>
           <h2 className="font-bold text-[34px]">Order Confirmed</h2>
-          <p className="text-xs text-slate-500">We hope you enjoy your food!</p>
+          <p className="text-xs text-colorRose400">We hope you enjoy your food!</p>
         </div>
-        <div className="flex flex-col gap-8 bg-[#F4EDEB] rounded-lg p-4 my-3">
+        <div className="flex flex-col gap-8 bg-colorRose50 rounded-lg p-4 my-3">
           <div className="flex flex-col gap-5">
             {sobremesas.map((item) => (
               <div key={item.name}>
@@ -41,10 +41,10 @@ const PopUpConfirmed = ({ onClose, onCloseClickingOut }: { onClose: () => void, 
                         <p className="font-bold text-xs">{item.name}</p>
                       </div>
                       <div className="flex gap-4">
-                        <p className="text-red-700 font-semibold text-xs">
+                        <p className="text-colorRed font-semibold text-xs">
                           {item.quantity}x
                         </p>
-                        <p className="text-gray-400 font-semibold text-xs">
+                        <p className="text-colorRose400 font-semibold text-xs">
                           <span className="text-[10px] mr-">@</span>
                           {item.price.toFixed(2)}
                         </p>
@@ -74,7 +74,7 @@ const PopUpConfirmed = ({ onClose, onCloseClickingOut }: { onClose: () => void, 
         <div>
           <button
             onClick={onClose}
-            className="flex w-full justify-center text-white bg-red-500 rounded-full py-2"
+            className="flex w-full justify-center text-white bg-colorRed rounded-full py-2"
           >
             Start New Order
           </button>

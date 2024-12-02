@@ -35,11 +35,11 @@ const Items = () => {
                 <ResponsiveImage image={sobremesa.image} />
               </div>
               <div className="flex flex-col gap-1 mt-6">
-                <p className="text-gray-400">{sobremesa.category}</p>
+                <p className="text-colorRose500">{sobremesa.category}</p>
                 <h2 className="font-bold text-xl md:text-base">
                   {sobremesa.name}
                 </h2>
-                <p className="text-red-500">${sobremesa.price.toFixed(2)}</p>
+                <p className="text-colorRed">${sobremesa.price.toFixed(2)}</p>
               </div>
               <div className="absolute left-11 top-28 md:left-[16%] md:top-72">
                 <Button sobremesa={sobremesa} />

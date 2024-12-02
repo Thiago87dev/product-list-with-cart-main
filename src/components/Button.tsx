@@ -53,7 +53,7 @@ const Button = ({ sobremesa }: ButtonProps) => {
       {productCount < 1 ? (
         <div
           onClick={handleButtonClick}
-          className="border-2 border-solid border-black bg-white text-black items-center font-semibold rounded-full gap-4 text-base flex py-4 px-10 md:text-lg cursor-pointer"
+          className="border-2 border-solid border-black hover:border-colorRed hover:text-colorRed bg-white text-black items-center font-semibold rounded-full gap-4 text-base flex py-4 px-10 md:text-lg cursor-pointer"
         >
           <Image
             alt="cart"
@@ -64,7 +64,7 @@ const Button = ({ sobremesa }: ButtonProps) => {
           Add to Cart
         </div>
       ) : (
-        <div className="border-2 border-solid border-black bg-red-500 text-black items-center font-semibold rounded-full gap-4 text-2xl flex py-3 px-[26px]  md:px-[30px] md:text-2xl ">
+        <div className="border-2 border-solid border-colorRed bg-colorRed text-black  items-center font-semibold rounded-full gap-4 text-2xl flex py-3 px-[26px]  md:px-[30px] md:text-2xl ">
           <div className="flex gap-10 items-center">
             <div
               onClick={handleDecreaseQuantity}
@@ -77,7 +77,7 @@ const Button = ({ sobremesa }: ButtonProps) => {
                 height={25}
               />
             </div>
-            <div>{productCount}</div>
+            <div className="text-white">{productCount}</div>
             <div
               onClick={handleIncreaseQuantity}
               className=" flex items-center justify-center border-solid border-2 border-white rounded-full w-8 h-8 cursor-pointer active:bg-black "

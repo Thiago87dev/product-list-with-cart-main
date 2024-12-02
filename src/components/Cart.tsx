@@ -34,7 +34,7 @@ const Cart = () => {
       {sobremesas.length === 0 ? (
         <div className="flex items-center justify-center w-[320px] min-h-[250px] bg-white m-5 rounded-lg lg:w-[400px] lg:min-h-[400px] md:mt-20 mb-20">
           <div className="flex flex-col gap-2 md:gap-8 p-4 ">
-            <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
+            <h2 className="text-colorRed text-2xl font-bold md:text-4xl">
               Your Cart (0)
             </h2>
             <Image
@@ -52,34 +52,34 @@ const Cart = () => {
       ) : (
         <div className="flex  text-black  bg-white m-5 rounded-lg w-[320px] min-h-[250px] lg:w-[400px] lg:min-h-[400px] md:mt-20 mb-20">
           <div className="flex flex-col gap-2 md:gap-8 w-full px-5 pt-14">
-            <h2 className="text-red-800 text-2xl font-bold md:text-4xl">
+            <h2 className="text-colorRed text-2xl font-bold md:text-4xl">
               Your Cart (
               {sobremesas.reduce((acc, item) => acc + item.quantity!, 0)})
             </h2>
             <div className="w-full">
               {sobremesas.map((i) => (
                 <div
-                  className="flex mb-8 justify-between items-center"
+                  className="flex mb-4 justify-between items-center"
                   key={i.name}
                 >
                   <div>
                     <div className="font-bold ">{i.name}</div>
                     <div className="flex">
-                      <div className="text-red-500 font-semibold">
+                      <div className="text-colorRed font-semibold">
                         {i.quantity}x
                       </div>
-                      <div className="ml-3 text-gray-500">
+                      <div className="ml-3 text-colorRose400">
                         <span className="font-extralight text-xs">@</span> $
                         {i.price.toFixed(2)}
                       </div>
-                      <div className="ml-2 text-gray-800">
+                      <div className="ml-2 text-colorRose500">
                         ${(i.price * i.quantity!).toFixed(2)}
                       </div>
                     </div>
                   </div>
                   <div
                     onClick={() => handleRemoveSobremesa(i.name)}
-                    className="flex cursor-pointer items-center justify-center font-bold border-solid w-5 h-5 border-2 rounded-full border-black"
+                    className="flex cursor-pointer items-center justify-center font-bold border-solid w-5 h-5 border-2 rounded-full border-colorRose500 hover:border-black text-colorRose500 hover:text-black"
                   >
                     X
                   </div>
@@ -95,7 +95,7 @@ const Cart = () => {
                   .toFixed(2)}
               </div>
             </div>
-            <div className="flex gap-2 justify-center">
+            <div className="flex gap-2 justify-center bg-colorRose50 p-4 text-sm rounded-md">
               <Image
                 src="/images/icon-carbon-neutral.svg"
                 alt="empty cart"
@@ -110,7 +110,7 @@ const Cart = () => {
             <div className="flex justify-center">
               <button
                 onClick={togglePopUp}
-                className="text-white bg-red-500 px-20 lg:px-24 py-2 rounded-full hover:bg-red-900"
+                className="text-white bg-colorRed px-20 lg:px-24 py-2 rounded-full hover:bg-red-900"
               >
                 Comfirm Order
               </button>
@@ -118,7 +118,12 @@ const Cart = () => {
           </div>
         </div>
       )}
-      {showPopUp && <PopUpConfirmed onCloseClickingOut={onCloseClickingOut} onClose={togglePopUp} />}
+      {showPopUp && (
+        <PopUpConfirmed
+          onCloseClickingOut={onCloseClickingOut}
+          onClose={togglePopUp}
+        />
+      )}
     </div>
   );
 };
