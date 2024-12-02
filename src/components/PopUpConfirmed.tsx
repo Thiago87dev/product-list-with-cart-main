@@ -8,7 +8,7 @@ const PopUpConfirmed = ({ onClose, onCloseClickingOut }: { onClose: () => void, 
 
   return (
     <div onClick={onCloseClickingOut} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 ">
-      <div className="flex flex-col gap-4 bg-white w-[320px] min-h-[250px] lg:min-h-[400px] lg:w-[400px] rounded-xl p-7 ">
+      <div className="flex overflow-auto flex-col gap-4 bg-white w-[320px] min-h-[250px] max-h-[450px] lg:min-h-[400px] lg:max-h-[600px] lg:w-[400px] rounded-xl p-7 ">
         <div>
           <Image
             alt="confirmed"

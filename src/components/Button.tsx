@@ -64,7 +64,7 @@ const Button = ({ sobremesa }: ButtonProps) => {
           Add to Cart
         </div>
       ) : (
-        <div className="border-2 min-w-[184px] max-w-[184px] border-solid border-colorRed bg-colorRed text-black  items-center font-semibold rounded-full gap-4 text-2xl flex py-3 px-[26px]  lg:px-[14px] lg:text-2xl ">
+        <div className="border-2 lg:min-w-[184px] lg:max-w-[184px] min-w-[210px] max-w-[210px] border-solid border-colorRed bg-colorRed text-black  items-center font-semibold rounded-full gap-4 text-2xl flex py-3 px-[26px]  lg:px-[14px] lg:text-2xl ">
           <div className="flex justify-between w-full items-center">
             <div
               onClick={handleDecreaseQuantity}
