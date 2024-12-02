@@ -38,7 +38,7 @@ const ResponsiveImage = ({ image }: { image: ImageProps }) => {
       alt="Responsive Dessert"
       width={500}
       height={500}
-      className="w-[300px] h-[150px] rounded-lg md:w-[320px] md:h-[320px]"
+      className="w-[300px] h-[150px] rounded-lg lg:w-[240px] lg:h-[240px]"
     />
   );
 };

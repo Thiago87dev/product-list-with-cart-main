@@ -31,7 +31,7 @@ const Items = () => {
               key={sobremesa.name}
               className="flex flex-col gap-4 my-5 relative"
             >
-              <div>
+              <div >
                 <ResponsiveImage image={sobremesa.image} />
               </div>
               <div className="flex flex-col gap-1 mt-6">
@@ -41,7 +41,7 @@ const Items = () => {
                 </h2>
                 <p className="text-colorRed">${sobremesa.price.toFixed(2)}</p>
               </div>
-              <div className="absolute left-11 top-28 md:left-[16%] md:top-72">
+              <div className="absolute left-11 top-28 lg:left-[12%] lg:top-52">
                 <Button sobremesa={sobremesa} />
               </div>
             </li>
