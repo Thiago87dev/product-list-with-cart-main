@@ -68,6 +68,9 @@ const cartSlice = createSlice({
         (sobremesa) => sobremesa.name !== action.payload
       );
     },
+    cleanCart: (state) => {
+      state.sobremesas = [];
+    },
   },
 });
 
@@ -76,6 +79,7 @@ export const {
   increaseQuantity,
   decreaseQuantity,
   removeSobremesa,
+  cleanCart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
