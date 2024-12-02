@@ -4,16 +4,15 @@ import "./globals.css";
 
 import ReduxProvider from "@/redux/ReduxProvider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const redHatText = localFont({
+  src: [
+    { path: "./fonts/RedHatText-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/RedHatText-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/RedHatText-SemiBold.ttf", weight: "600", style: "normal" },
+  ],
+  variable: "--font-red-hat",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${redHatText.variable} antialiased`}
       >
         <ReduxProvider>{children}</ReduxProvider>
       </body>

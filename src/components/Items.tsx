@@ -36,7 +36,7 @@ const Items = () => {
               </div>
               <div className="flex flex-col gap-1 mt-6">
                 <p className="text-colorRose500">{sobremesa.category}</p>
-                <h2 className="font-bold text-xl md:text-base">
+                <h2 className="font-semibold text-xl md:text-base">
                   {sobremesa.name}
                 </h2>
                 <p className="text-colorRed">${sobremesa.price.toFixed(2)}</p>
