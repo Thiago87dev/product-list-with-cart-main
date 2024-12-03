@@ -47,7 +47,6 @@ const Button = ({ sobremesa }: ButtonProps) => {
     dispatch(decreaseQuantity(sobremesa.name));
   };
 
-
   return (
     <div>
       {productCount < 1 ? (
@@ -68,26 +67,44 @@ const Button = ({ sobremesa }: ButtonProps) => {
           <div className="flex justify-between w-full items-center">
             <div
               onClick={handleDecreaseQuantity}
-              className=" flex items-center justify-center border-solid border-2 border-white rounded-full w-8 h-8 cursor-pointer active:bg-black"
+              className=" flex items-center justify-center border-solid border-2 border-white rounded-full w-8 h-8 cursor-pointer active:bg-black active:text-colorRed active:dark:invert active:border-black"
             >
-              <Image
-                alt="cart"
-                src="/images/icon-decrement-quantity.svg"
-                width={25}
-                height={25}
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="4"
+                fill="none"
+                viewBox="0 0 10 2"
+                className="stroke-current"
+              >
+                <path
+                  fill="#fff"
+                  stroke="#fff"
+                  strokeWidth="0.1"
+                  d="M0 .375h10v1.25H0V.375Z"
+                />
+              </svg>
             </div>
             <div className="text-white">{productCount}</div>
             <div
               onClick={handleIncreaseQuantity}
-              className=" flex items-center justify-center border-solid border-2 border-white rounded-full w-8 h-8 cursor-pointer active:bg-black "
+              className=" flex items-center justify-center border-solid border-2 border-white rounded-full w-8 h-8 cursor-pointer active:bg-black active:text-colorRed active:dark:invert active:border-black"
             >
-              <Image
-                alt="cart"
-                src="/images/icon-increment-quantity.svg"
-                width={25}
-                height={25}
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 10 10"
+                className="stroke-current "
+              >
+                <path
+                  fill="#fff"
+               
+                  strokeWidth="0.1"
+                  d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+                />
+              </svg>
             </div>
           </div>
         </div>
